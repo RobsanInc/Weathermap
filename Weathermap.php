@@ -16,7 +16,12 @@ class Weathermap
 
         //Parse config files
         $files = list_weathermaps($mapdir);
-
+        //Strip .conf in title to clean up Plugins/Weathermap Menu
+        foreach ($files as $file => $data) {
+            $files[$file]['title'] = basename($data['title'], '.conf');
+        }
+        //Append the $files array and add the Weathermap Editor
+        $files[] = ['page'=> 'editor.php', 'title'=> 'WM Editor'];
         //Create submenu
         $submenu = ' <ul class="dropdown-menu scrollable-menu">';
         $count = 0;

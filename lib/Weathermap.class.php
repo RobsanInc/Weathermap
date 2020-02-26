@@ -775,13 +775,13 @@ function ProcessTargets()
 	
 	wm_debug("Preprocessing targets\n");
 	
-	while( list($kk,) = each($allitems))
+        foreach(array_keys($allitems) as $kk)	
 	{
 		unset($objects);
 		$objects = &$allitems[$kk];
 
 		reset($objects);
-		while (list($k,) = each($objects))
+		foreach(array_keys($objects) as $k)
 		{
 			unset($myobj);
 			$myobj = &$objects[$k];
@@ -893,13 +893,13 @@ function ReadData()
 		$allitems = array(&$this->links, &$this->nodes);
 		reset($allitems);
 		
-		while( list($kk,) = each($allitems))
+		foreach(array_keys($allitems) as $kk)
 		{
 			unset($objects);
 			$objects = &$allitems[$kk];
 
 			reset($objects);
-			while (list($k,) = each($objects))
+			foreach(array_keys($objects) as $k)
 			{
 				unset($myobj);
 				$myobj = &$objects[$k];
@@ -3436,14 +3436,14 @@ function PreloadMapHTML()
 		$allitems = array(&$this->nodes, &$this->links);
 		reset($allitems);
 
-		while( list($kk,) = each($allitems))
+		foreach(array_keys($allitems) as $kk)
 		{
 			unset($objects);
 			# $objects = &$this->links;
 			$objects = &$allitems[$kk];
 
 			reset($objects);
-			while (list($k,) = each($objects))
+			foreach(array_keys($objects) as $k)
 			{
 				unset($myobj);
 				$myobj = &$objects[$k];
