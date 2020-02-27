@@ -3540,7 +3540,7 @@ function PreloadMapHTML()
 								$note=str_replace('"', "&quot;", $note);
 								$overlibhtml .= $note;
 							}
-							$overlibhtml .= "',DELAY,250,${left}${above}CAPTION,'" . $caption
+							$overlibhtml .= "',DELAY,125,${left}${above}CAPTION,'" . $caption
 							. "');\"  onmouseout=\"return nd();\"";
 							
 							foreach ($parts as $part)
