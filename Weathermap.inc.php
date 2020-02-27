@@ -35,7 +35,7 @@ if(! is_writable('plugins/Weathermap/configs')) {
   }
   echo('</ul>
     </div>');
-// If you aren't using an overview* map, default to previous style
+// If you aren't using an overview* map, default to the previous style
 } else {
   echo ('Click <a href="plugins/Weathermap/editor.php">here to access the editor</a> where you can create and manage maps.');
   $directory = 'plugins/Weathermap/output/';
